@@ -10,13 +10,15 @@ import React from 'react';
 * @ constructor(props) state(es6语法) == getInitialState，初始化组件state默认值；
 * @ componentWillMount ==> render之前运行，也是在render之前唯一一次机会修改state状态；
 * @ componentDidMount ==> render并渲染完成DOM之后，被调用，可以修改state的状态;
+* 可以再控制台，看log的输出顺序
 */
 class InitialStates extends React.Component {
-    getDefaultProps() {
-        console.log('@getDefaultProps',1);
-        return {name: 'Tom'}
-    }
-
+    static defaultProps = {
+        name: 'Tom'
+    };
+    static propTypes={
+        name: React.PropTypes.string.isRequired
+    };
     constructor(props) {
         super(props);
         this.state = {
@@ -35,7 +37,7 @@ class InitialStates extends React.Component {
         console.log("@render",4);
         return (
             <div>
-                Initial States test! {this.props.name ? this.props.anme : 'hehe'}
+                Initial States test! {this.props.name ? this.props.name : 'hehe'}
                 <br/>
                 {'' + this.state.ready}
             </div>
