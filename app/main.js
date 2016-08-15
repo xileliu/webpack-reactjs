@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './component.jsx';
+import ParentComponent from './react_running.jsx';
 import InitialStates from './react_state.jsx';
 
 ReactDOM.render(<InitialStates/>, document.getElementById('example'));
-ReactDOM.render(<Hello />, document.getElementById('app'));
+
+ReactDOM.render(<ParentComponent/>, document.getElementById('running'));
