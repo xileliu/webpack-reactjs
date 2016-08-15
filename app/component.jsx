@@ -6,5 +6,4 @@ class Hello extends React.Component {
         return (<h2>hellow,word!</h2>);
     }
 }
-console.log(React);
 module.exports = Hello;
