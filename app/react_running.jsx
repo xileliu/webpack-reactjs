@@ -1,5 +1,4 @@
 import React from 'react';
-
 /*
 * react 运行中的生命周期
 * componentWillReceiveProps: 组件的props改变的时，运行此函数

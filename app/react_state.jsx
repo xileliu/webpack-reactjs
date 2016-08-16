@@ -1,5 +1,5 @@
 import React from 'react';
-
+//import './css/demo.scss';
 /*
 * InitialStates: 初始化状态组件
 * react 初始化的阶段每个内置的api函数是如何执行的
@@ -36,7 +36,7 @@ class InitialStates extends React.Component {
     render() {
         console.log("@render",4);
         return (
-            <div>
+            <div className="bg">
                 Initial States test! {this.props.name ? this.props.name : 'hehe'}
                 <br/>
                 {'' + this.state.ready}
