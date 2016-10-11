@@ -1,5 +1,6 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -34,7 +35,15 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("[name].css",{
             chunks:["redpacket"]
-        })
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'index.html',
+          template: './app/view/index.html',
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'accordion.html',
+          template: './app/view/accordion.html',
+        }),
     ],
     resolve: {
         extensions: ['', '.js', '.jsx', '.json']
